@@ -1,4 +1,3 @@
-
 # A simple script to print your Mikrotik board type
 
 :local boardType [/system resource get board]

@@ -6,11 +6,11 @@
 
 # Check if it's after noon
 :if ($CurrentTime > 12:00) do={
-    :local TimeOfDay "Afternoon/Evening"
+    :local TimeOfDay "Afternoon/Evening";
 } else={
     # otherwise, it must be morning (00:00 to 11:59)
-    :local TimeOfDay "Morning"
+    :local TimeOfDay "Morning";
 }
 
 # Print out the time of day
-:put "At the moment, it's : $TimeOfDay"
+:put "At the moment, it's : $TimeOfDay";

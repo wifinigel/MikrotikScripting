@@ -2,5 +2,5 @@
 
 # Hello World Script
 
-/local Message "Hello World!";
-/log info $Message;
+:local Message "Hello World!";
+:log info $Message;

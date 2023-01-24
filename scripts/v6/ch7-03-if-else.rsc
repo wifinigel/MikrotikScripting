@@ -11,7 +11,7 @@
 :if ($CurrentTime > 12:00) do={
     :put "Good day!";
 } else={
-    :put "Good morning!"
+    :put "Good morning!";
 }
 
 # Say goodbye

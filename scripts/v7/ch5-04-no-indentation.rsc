@@ -1,0 +1,7 @@
+# ch5-04-no-indentation.rsc
+
+# Create an if-else statement with no additional indentation
+:local DayOfWeek "Monday";
+
+if ($DayOfWeek = "Monday") do={:put "Boo...it's Monday."
+} else={:put "Yay! It's not Monday!"}

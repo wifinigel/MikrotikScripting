@@ -9,9 +9,9 @@
 :local UpDown;
 
 if ([:interface ethernet get $InterfaceIndex]->"running") do={
-    :set UpDown "up"
+    :set UpDown "up";
 } else={
-    :set UpDown "down"
+    :set UpDown "down";
 }
 
 :put "Interface $WanInterfaceName is currently $UpDown";

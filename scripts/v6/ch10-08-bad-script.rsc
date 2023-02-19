@@ -1,4 +1,4 @@
-:global Filename "ch10-08-bad-script.rsc"
+:local Filename "ch10-08-bad-script.rsc"
 # A script to perform a series of tests on a
 # list of web sites.
 
@@ -9,7 +9,7 @@
 # debug function
 :global DebugFunc do={
     :global DEBUG;
-    :if ($DEBUG) do={ :put "**Debug: $1";     }
+    :if ($DEBUG) do={ :put "**Debug: $1"; }
 }
 
 # function to log error messages
@@ -35,8 +35,8 @@
 
         :if (([:typeof $WebSiteName] != "str") or \
                     ([:len value=$WebSiteName] < 6)) do={
-            :local ErrorMsg "DnsResolveFunc: arg value $WebSiteName not a valid \
-                string!";
+            :local ErrorMsg "DnsResolveFunc: arg value $WebSiteName \
+                not a valid string!";
             $LogMessageFunc $ErrorMsg;
             $DebugFunc $ErrorMsg; 
             :return "*** test failed ***";
@@ -51,8 +51,8 @@
         :return $SiteIpAddr;
     } on-error={
         $DebugFunc "DNS lookup failed!";
-        $LogMessageFunc ("DnsResolveFunc: name resolution failed for site: \
-            $WebSiteName!");
+        $LogMessageFunc ("DnsResolveFunc: name resolution failed for \
+            site: $WebSiteName!");
         :return "*** test failed ***";
     }
 }
@@ -64,16 +64,16 @@
 
     # check arg type ip is passed
     :if ([:typeof $IpAddress] != "ip") do={
-        $LogMessageFunc ("PingIpAddressFunc: arg value $IpAddress not an IP \
-            address!");
+        $LogMessageFunc ("PingIpAddressFunc: arg value $IpAddress not \
+            an IP address!");
         :return "*** test failed ***";
     }
     
     :do {
         return [/ping $IpAddress count=3];
     } on-error {
-        $LogMessageFunc ("PingIpAddressFunc: ping test to IP address failed: \
-            $IpAddress !");
+        $LogMessageFunc ("PingIpAddressFunc: ping test to IP address \
+            failed: $IpAddress !");
         :return "*** test failed ***";
     }
 }
@@ -84,17 +84,19 @@
     :global LogMessageFunc;
 
     # check arg type str of correct length passed
-    if (([:typeof $SiteName] != "str") or ([:len value=$SiteName] < 6)) do={
-        $LogMessageFunc ("GetWebPageFunc: arg value $SiteName not a valid \
-            string!");
+    if (([:typeof $SiteName] != "str") or \
+        ([:len value=$SiteName] < 6)) do={
+        $LogMessageFunc ("GetWebPageFunc: arg value $SiteName not a \
+            valid string!");
         :return { "duration"="*** test failed ***" };
     }
 
     do {
-        return [/tool fetch url=("https://$SiteName") mode=https http-method=get \
-        as-value keep-result=no];
+        return [/tool fetch url=("https://$SiteName") mode=https \
+            http-method=get as-value keep-result=no];
     } on-error {
-        $LogMessageFunc ("GetWebPageFunc: unable to retrieve site: $SiteName !");
+        $LogMessageFunc ("GetWebPageFunc: unable to retrieve site: \
+            $SiteName !");
         return { "duration"="*** test failed ***" };
     }
 }
@@ -128,7 +130,6 @@
 }
 
 # cleanup global namespace
-:set Filename;
 :set LogMessageFunc;
 :set DnsResolveFunc;
 :set PingIpAddressFunc;

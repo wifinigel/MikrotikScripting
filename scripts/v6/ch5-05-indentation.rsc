@@ -1,6 +1,6 @@
 # ch5-05-indentation.rsc
 
-# Create an if-else statement with no additional indentation
+# Create an if-else statement with indentation
 :local DayOfWeek "Monday";
 
 if ($DayOfWeek = "Monday") do={

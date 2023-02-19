@@ -8,8 +8,8 @@
 :for VlanId from=100 to=150 step=10 do={
 
     :put ("Creating VLAN $VlanId on interface $InterfaceName");
-
     :local VlanName ("vlan" . $VlanId);
-    /interface vlan add name=$VlanName vlan-id=$VlanId interface=$InterfaceName;
+    /interface vlan add name=$VlanName vlan-id=$VlanId \
+        interface=$InterfaceName;
 }
 

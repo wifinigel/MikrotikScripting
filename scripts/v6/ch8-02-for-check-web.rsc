@@ -12,9 +12,8 @@
 
     :local PingResult [/ping $Site count=3 ];
     :if ($PingResult > 0) do {
-        :put ("\nWeb site $Site reached OK\n");
+        :put "\nWeb site $Site reached OK\n";
     } else={
-        :put ("\nNo response from web site: $Site\n");
+        :put "\nNo response from web site: $Site\n";
     }
 }
-

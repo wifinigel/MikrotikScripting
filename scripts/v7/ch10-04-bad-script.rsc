@@ -1,4 +1,4 @@
-:global Filename "ch10-04-bad-script.rsc"
+:local Filename "ch10-04-bad-script.rsc"
 # A simple script to perform a series of tests on a
 # list of web sites. 
 
@@ -17,9 +17,10 @@
     :global LogMessageFunc;
 
     # check arg type str of correct length passed
-    if (([:typeof $WebSiteName]!="str") or ([:len value=$WebSiteName] < 6)) do={
-        $LogMessageFunc ("DnsResolveFunc: arg value $WebSiteName not a valid \
-            string!");
+    if (([:typeof $WebSiteName]!="str") or \
+        ([:len value=$WebSiteName] < 6)) do={
+        $LogMessageFunc ("DnsResolveFunc: arg value $WebSiteName not \
+            a valid string!");
     }
 
     return [/resolve $WebSiteName];
@@ -32,8 +33,8 @@
 
     # check arg type ip is passed
     if ([:typeof $IpAddress] != "ip") do={
-        $LogMessageFunc ("PingIpAddressFunc: arg value $IpAddress not an IP \
-            address!");
+        $LogMessageFunc ("PingIpAddressFunc: arg value $IpAddress not \
+            an IP address!");
     }
 
     return [/ping $IpAddress count=3];
@@ -45,13 +46,14 @@
     :global LogMessageFunc;
 
     # check arg type str of correct length passed
-    if (([:typeof $SiteName] != "str") or ([:len value=$SiteName] < 6)) do={
-        $LogMessageFunc ("GetWebPageFunc: arg value $SiteName not a valid \
-            string!");
+    if (([:typeof $SiteName] != "str") or \
+        ([:len value=$SiteName] < 6)) do={
+        $LogMessageFunc ("GetWebPageFunc: arg value $SiteName not a \
+            valid string!");
     }
 
-    return [/tool fetch url=("https://$SiteName") mode=https http-method=get \
-        as-value keep-result=no];
+    return [/tool fetch url=("https://$SiteName") mode=https \
+        http-method=get as-value keep-result=no];
 }
 
 ##########
@@ -83,7 +85,6 @@
 }
 
 # cleanup global namespace
-:set Filename;
 :set LogMessageFunc;
 :set DnsResolveFunc;
 :set PingIpAddressFunc;

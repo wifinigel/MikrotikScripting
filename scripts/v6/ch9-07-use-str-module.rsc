@@ -1,6 +1,7 @@
 # filename: ch9-07-use-str-module.rsc
 
-# import the functions we need and declare the function names we wish to use
+# import the functions we need and declare the function
+# names we wish to use
 /import "ch9-06-str-funcs-mod.rsc"
 :global RemoveSpaceFunc;
 :global ChopStrFunc;

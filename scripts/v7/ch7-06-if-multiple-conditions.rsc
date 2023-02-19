@@ -5,7 +5,7 @@
 :put "The current time is : $CurrentTime";
 
 # declare the time of day variable
-:local TimeOfDay
+:local TimeOfDay;
 
 # Check if it's very early
 :if (($CurrentTime >= 00:00) and ($CurrentTime < 06:00)) do={

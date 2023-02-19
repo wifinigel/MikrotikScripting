@@ -28,7 +28,8 @@
     }
 
     # data type checks passed, print the interface data
-    :put "$InterfaceName: IP address = $InterfaceIp, speed = $InterfaceSpeed"; 
+    :put "$InterfaceName: IP address = $InterfaceIp, speed = \
+        $InterfaceSpeed"; 
 }
 # --- end of function ---
 
@@ -37,7 +38,8 @@
 $PrintInterfaceAttrsFunc $Args;
 
 # Let's call the function with some other values in an array
-:set Args { ifname="ether2-LAN"; ifspeed="1000Mbps"; ifip="172.16.1.254/24" };
+:set Args { ifname="ether2-LAN"; ifspeed="1000Mbps"; 
+    ifip="172.16.1.254/24" };
 $PrintInterfaceAttrsFunc $Args;
 
 # Cleanup global namespace

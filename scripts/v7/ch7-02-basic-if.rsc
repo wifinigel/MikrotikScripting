@@ -24,6 +24,6 @@ if ( $WanPingCount = 0) do={
 }
 
 if ( ($WanPingCount < $PingCount) and ($WanPingCount > 0) ) do={   
-    :log warning "The Internet connection may be degraded. (Ping result: \
-        $WanPingCount/$PingCount)";
+    :log warning "The Internet connection may be degraded. (Ping \
+        result: $WanPingCount/$PingCount)";
 }

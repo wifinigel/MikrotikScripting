@@ -3,7 +3,7 @@
 # a script to add and remove 50 VLANs to/from
 # a Mikrotik router interface
 
-: for VlanId from 200 to 249 do={
+:for VlanId from 200 to 249 do={
 
     # find LAN interface ID
     :local LanInterface "ether2";
@@ -15,7 +15,7 @@
         interface=$LanInterfaceId;
 } 
 
-: for VlanId from 200 to 249 do={
+:for VlanId from 200 to 249 do={
 
     # find LAN interface ID
     :local LanInterface "ether2";

@@ -7,7 +7,7 @@
 :local LanInterface "ether2";
 :local LanInterfaceId [/interface find default-name=$LanInterface];
 
-: for VlanId from 200 to 249 do={
+:for VlanId from 200 to 249 do={
 
     # add VLAN to LAN interface
     :local VlanName "VLAN$VlanId";
@@ -15,7 +15,7 @@
         interface=$LanInterfaceId;
 } 
 
-: for VlanId from 200 to 249 do={
+:for VlanId from 200 to 249 do={
 
     # add VLAN to LAN interface
     :local VlanName "VLAN$VlanId";

@@ -16,7 +16,7 @@
 
 # function to remove last char from a string
 #
-# e.g. :local ChoppedVar [$chopStrFunc "string with extra char,"]
+# e.g. :local ChoppedVar [$ChopStrFunc "string with extra char,"]
 #
 :global ChopStrFunc do={
    :return [ :pick $1 0 ( [ :len $1 ] -1 ) ];

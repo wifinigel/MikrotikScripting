@@ -3,12 +3,12 @@
 # define WAN interface name
 :local WanInterfaceName "ether1-WAN";
 
-# find the interface index
-:local InterfaceIndex [/interface/ethernet find name=$WanInterfaceName];
+# find the interface ID
+:local InterfaceId [/interface/ethernet find name=$WanInterfaceName];
     
 :local UpDown;
 
-if ([:interface ethernet get $InterfaceIndex]->"running") do={
+if ([:interface ethernet get $InterfaceId]->"running") do={
     :set UpDown "up";
 } else={
     :set UpDown "down";

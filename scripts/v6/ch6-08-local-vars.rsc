@@ -7,13 +7,13 @@
 :put ("Variable contents: $SmallNumber"); 
 
 # Assign some data to the variable
-:set SmallNumber 2
+:set SmallNumber 2;
 
 # Print its value again
 :put ("Variable contents: $SmallNumber"); 
 
 # Let's change the variable value
-:set SmallNumber 3
+:set SmallNumber 3;
 
 # Print its value again
 :put ("Variable contents: $SmallNumber");

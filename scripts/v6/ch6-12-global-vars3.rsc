@@ -15,7 +15,8 @@ if ( [:typeof $WanInterfaces] = "nothing") do={
 
 # Is the variable an array data type?
 if ( [:typeof $WanInterfaces] != "array") do={
-    :error "The WanInterfaces global variable is not an array data type. Exiting."
+    :error "The WanInterfaces global variable is not an array data \
+        type. Exiting."
 }
 
 # Let's step through the interfaces in the array 

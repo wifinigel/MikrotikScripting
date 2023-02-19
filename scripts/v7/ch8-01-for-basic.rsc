@@ -4,7 +4,7 @@
 # the 12 times table
 :for LoopCount from=1 to=5 do={
 
-    :put ("Current loop counter is: $LoopCount");
+    :put "Current loop counter is: $LoopCount";
     :put ("12 x $LoopCount is: " . (12 * $LoopCount));
 }
 

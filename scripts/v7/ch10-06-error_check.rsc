@@ -4,7 +4,7 @@
     :do {
         :local SiteIpAddress [/resolve $SiteName];
         :put "Site IP for $SiteName is $SiteIpAddress";
-    } on-error {
+    } on-error={
         :put "Name lookup failed for $SiteName"
     }
 }

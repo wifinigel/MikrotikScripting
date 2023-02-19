@@ -8,7 +8,7 @@
 :local LanInterfaceId [/interface find default-name=$LanInterface];
 
 :local AddLoopTime [:time {
-    : for VlanId from 200 to 249 do={
+    :for VlanId from 200 to 249 do={
 
         # add VLAN to LAN interface
         :local VlanName "VLAN$VlanId";
@@ -20,7 +20,7 @@
 :put "Add loop time: $AddLoopTime";
 
 :local RemoveLoopTime [:time {
-    : for VlanId from 200 to 249 do={
+    :for VlanId from 200 to 249 do={
 
         # add VLAN to LAN interface
         :local VlanName "VLAN$VlanId";

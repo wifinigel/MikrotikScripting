@@ -10,7 +10,7 @@
 :foreach s in=$w do={
 
     # try a DNS resolution of this site
-    :local i [/resolve $s];
+    :local i [:resolve $s];
 
     # try pinging the IP address of this site
     :local p [/ping $i count=3 ];

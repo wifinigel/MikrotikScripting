@@ -27,7 +27,7 @@
 
     # try a name lookup
     :do {
-        return [/resolve $WebSiteName];
+        return [:resolve $WebSiteName];
     } on-error={
         $LogMessageFunc ("DnsResolveFunc: name resolution failed for \
             site: $WebSiteName!");

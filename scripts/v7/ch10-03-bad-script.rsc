@@ -10,7 +10,7 @@
 :foreach SiteName in=$WebSites do={
 
     # try a DNS resolution of this site
-    :local IpAddress [/resolve $SiteName];
+    :local IpAddress [:resolve $SiteName];
 
     # try pinging the IP address of this site
     :local PingResult [/ping $IpAddress count=3 ];

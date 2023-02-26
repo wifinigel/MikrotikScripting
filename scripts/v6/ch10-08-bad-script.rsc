@@ -46,7 +46,7 @@
 
     :do {
         $DebugFunc "Looking up IP of site name...";
-        :local SiteIpAddr [/resolve $WebSiteName];
+        :local SiteIpAddr [:resolve $WebSiteName];
         $DebugFunc $SiteIpAddr;
         :return $SiteIpAddr;
     } on-error={

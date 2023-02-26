@@ -23,7 +23,7 @@
             a valid string!");
     }
 
-    return [/resolve $WebSiteName];
+    return [:resolve $WebSiteName];
 }
 
 # function to ping an IP address 3 times

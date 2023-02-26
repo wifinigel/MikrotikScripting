@@ -3,7 +3,7 @@
 :local w {"mikrotik.com"; "www.google.com"; "twitter.com"};
 
 :foreach s in=$w do={
-    :local i [/resolve $s];
+    :local i [:resolve $s];
     :local p [/ping $i count=3 ];
     :local u [/tool fetch url=("https://$s") mode=https http-method=get \
         as-value keep-result=no];

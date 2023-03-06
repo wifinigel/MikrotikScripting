@@ -22,10 +22,10 @@ if ( [:typeof $WanInterfaces] != "array") do={
 # Let's step through the interfaces in the array 
 # and print out their operation status
 :foreach WanInterface in=$WanInterfaces do={  
-    :local InterfaceIndex [/interface ethernet find name=$WanInterface];
+    :local InterfaceId [/interface ethernet find name=$WanInterface];
     
     :local UpDown "down";
-    if ([:interface ethernet get $InterfaceIndex]->"running") do={
+    if ([:interface ethernet get $InterfaceId]->"running") do={
         :set UpDown "up"
     }
 

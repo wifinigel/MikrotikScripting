@@ -6,8 +6,8 @@
 # --- start of function ---
 :global MacColonRemoveFunc do={
    :local TidyMac "";
-   for i from=0 to=([:len $1]-1) do={ 
-      :local TmpValue [:pick $1 $i];
+   for CharNumber from=0 to=([:len $1]-1) do={ 
+      :local TmpValue [:pick $1 $CharNumber];
       :if ($TmpValue !=":") do={ :set TidyMac "$TidyMac$TmpValue" }
    }
    :return $TidyMac;

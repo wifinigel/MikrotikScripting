@@ -6,8 +6,8 @@
 #
 :global RemoveSpaceFunc do={
    :local NewName ""
-   for i from=0 to=([:len $1]-1) do={ 
-      :local Tmp [:pick $1 $i]
+   for CharNumber from=0 to=([:len $1]-1) do={ 
+      :local Tmp [:pick $1 $CharNumber]
       :if ($Tmp !=" ") do={ :set NewName "$NewName$Tmp" }
    }
    :return $NewName

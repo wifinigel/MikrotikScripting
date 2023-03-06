@@ -23,7 +23,8 @@
     }
 
     # data type checks passed, print the interface data
-    :put "$InterfaceName: IP address = $InterfaceIp, speed = $InterfaceSpeed"; 
+    :put "$InterfaceName: IP address = $InterfaceIp, speed = \
+        $InterfaceSpeed"; 
 
 }
 # --- end of function ---

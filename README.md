@@ -1,5 +1,6 @@
 # Mikrotik Scripting
 
+<img align="right" images/bookcover.png">
 Welcome to the Mikrotik Scripting book code and image repository.
 
 All code examples from the book may be found here:

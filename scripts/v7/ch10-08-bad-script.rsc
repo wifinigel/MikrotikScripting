@@ -1,4 +1,4 @@
-:local Filename "ch10-08-bad-script.rsc"
+:global Filename "ch10-08-bad-script.rsc"
 # A script to perform a series of tests on a
 # list of web sites.
 
@@ -136,3 +136,4 @@
 :set GetWebPageFunc;
 :set DEBUG;
 :set DebugFunc;
+:set Filename;

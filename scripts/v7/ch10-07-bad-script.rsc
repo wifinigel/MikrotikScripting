@@ -1,4 +1,4 @@
-:local Filename "ch10-07-bad-script.rsc"
+:global Filename "ch10-07-bad-script.rsc"
 # A script to perform a series of tests on a
 # list of web sites. 
 
@@ -114,3 +114,4 @@
 :set DnsResolveFunc;
 :set PingIpAddressFunc;
 :set GetWebPageFunc;
+:set Filename;

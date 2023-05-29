@@ -1,7 +1,7 @@
 # filename: ch7-06-multiple-conditions.rsc
 
 # Get the current time
-:local CurrentTime [:system clock get time];
+:local CurrentTime [/system clock get time];
 :put "The current time is : $CurrentTime";
 
 # declare the time of day variable

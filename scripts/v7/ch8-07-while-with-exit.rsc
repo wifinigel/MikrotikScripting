@@ -1,4 +1,4 @@
-# filename: ch8-06-while-with-exit.rsc
+# filename: ch8-07-while-with-exit.rsc
 
 # Let's create a loop using "while"
 

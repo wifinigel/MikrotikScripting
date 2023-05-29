@@ -1,7 +1,7 @@
 # filename: ch7-04-if-else-vars.rsc
 
 # Get the current time
-:local CurrentTime [:system clock get time];
+:local CurrentTime [/system clock get time];
 :put "The current time is : $CurrentTime";
 
 # Check if it's after noon

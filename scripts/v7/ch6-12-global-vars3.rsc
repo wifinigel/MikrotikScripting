@@ -25,7 +25,7 @@ if ( [:typeof $WanInterfaces] != "array") do={
     :local InterfaceId [/interface/ethernet find name=$WanInterface];
     
     :local UpDown "down";
-    if ([:interface/ethernet get $InterfaceId]->"running") do={
+    if ([/interface/ethernet get $InterfaceId]->"running") do={
         :set UpDown "up"
     }
 

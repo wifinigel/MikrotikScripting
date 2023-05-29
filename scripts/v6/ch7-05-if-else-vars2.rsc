@@ -1,7 +1,7 @@
 # filename: ch7-05-if-else-vars2.rsc
 
 # Get the current time
-:local CurrentTime [:system clock get time];
+:local CurrentTime [/system clock get time];
 :put "The current time is : $CurrentTime";
 
 # declare the time of day variable

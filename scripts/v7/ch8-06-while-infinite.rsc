@@ -13,7 +13,7 @@
     :set LoopCounter ($LoopCounter - 1);
 
     # add in a pause to prevent cpu thrashing
-    delay 1;
+    :delay 1;
 }
 
 # print a message when/if the loop exits

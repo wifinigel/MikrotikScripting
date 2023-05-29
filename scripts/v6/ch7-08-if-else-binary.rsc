@@ -8,7 +8,7 @@
     
 :local UpDown;
 
-if ([:interface ethernet get $InterfaceId]->"running") do={
+if ([/interface ethernet get $InterfaceId]->"running") do={
     :set UpDown "up";
 } else={
     :set UpDown "down";

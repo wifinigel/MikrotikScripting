@@ -21,7 +21,7 @@
 
     # check arg type str of correct length passed
     if (([:typeof $WebSiteName]!="str") or \
-        ([:len value=$WebSiteName] < 6)) do={
+        ([:len $WebSiteName] < 6)) do={
         $LogMessageFunc ("DnsResolveFunc: arg value $WebSiteName not \
             a valid string!");
     }
@@ -50,7 +50,7 @@
 
     # check arg type str of correct length passed
     if (([:typeof $SiteName] != "str") or \
-        ([:len value=$SiteName] < 6)) do={
+        ([:len $SiteName] < 6)) do={
         $LogMessageFunc ("GetWebPageFunc: arg value $SiteName not a \
             valid string!");
     }

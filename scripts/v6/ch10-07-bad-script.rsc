@@ -1,6 +1,9 @@
+# filename: ch10-07-bad-script.rsc
+#
+# A simple script to perform a series of tests on a
+# list of web sites.
+
 :global Filename "ch10-07-bad-script.rsc"
-# A script to perform a series of tests on a
-# list of web sites. 
 
 # function to log error messages
 :global LogMessageFunc do={

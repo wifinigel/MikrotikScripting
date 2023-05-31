@@ -1,6 +1,9 @@
-:global Filename "ch10-08-bad-script.rsc"
-# A script to perform a series of tests on a
+# filename: ch10-08-bad-script.rsc
+#
+# A simple script to perform a series of tests on a
 # list of web sites.
+
+:global Filename "ch10-08-bad-script.rsc"
 
 # set DEBUG to "true" for script debugging output,
 # "false" for normal operation

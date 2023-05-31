@@ -1,4 +1,4 @@
-# ch10-09-simple-pause.rsc
+# filename: ch10-09-simple-pause.rsc
 
 # A simple script that includes a 2 second pause
 

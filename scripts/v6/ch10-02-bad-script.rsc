@@ -13,7 +13,7 @@
     :local i [:resolve $s];
 
     # try pinging the IP address of this site
-    :local p [/ping $i count=3 ];
+    :local p [/ping $i count=3];
 
     # try fetching the web page of this site
     :local u [/tool fetch url=("https://$s") mode=https http-method=get \

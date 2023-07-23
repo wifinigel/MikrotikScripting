@@ -3,7 +3,7 @@
 # A simple script to perform a series of tests on a
 # list of web sites.
 
-:global Filename "ch10-07-bad-script.rsc"
+:global Filename "ch10-07-bad-script.rsc";
 
 # function to log error messages
 :global LogMessageFunc do={
@@ -80,7 +80,7 @@
     } on-error={
         $LogMessageFunc ("GetWebPageFunc: unable to retrieve site: \
             $SiteName !");
-        :return { "*** test failed ***" }
+        :return { "duration"="*** test failed ***" }
     }
 }
 

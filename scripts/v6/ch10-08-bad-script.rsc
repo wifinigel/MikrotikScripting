@@ -3,7 +3,7 @@
 # A simple script to perform a series of tests on a
 # list of web sites.
 
-:global Filename "ch10-08-bad-script.rsc"
+:global Filename "ch10-08-bad-script.rsc";
 
 # set DEBUG to "true" for script debugging output,
 # "false" for normal operation
@@ -91,7 +91,7 @@
         ([:len $SiteName] < 6)) do={
         $LogMessageFunc ("GetWebPageFunc: arg value $SiteName not a \
             valid string!");
-        :return { "*** test failed ***" };
+        :return { "duration"="*** test failed ***" }
     }
 
     do {
@@ -100,7 +100,7 @@
     } on-error {
         $LogMessageFunc ("GetWebPageFunc: unable to retrieve site: \
             $SiteName !");
-        return { "*** test failed ***" };
+        :return { "duration"="*** test failed ***" }
     }
 }
 

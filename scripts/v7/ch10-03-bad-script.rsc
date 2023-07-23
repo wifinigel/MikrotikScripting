@@ -13,7 +13,7 @@
     :local IpAddress [:resolve $SiteName];
 
     # try pinging the IP address of this site
-    :local PingResult [/ping $IpAddress count=3 ];
+    :local PingResult [/ping $IpAddress count=3];
 
     # try getting the web page of this site
     :local UrlFetch [/tool fetch url=("https://$SiteName") mode=https \

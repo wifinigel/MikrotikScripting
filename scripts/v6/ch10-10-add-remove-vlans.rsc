@@ -1,4 +1,4 @@
-# ch10-10-add-remove-vlans.rsc
+# filename: ch10-10-add-remove-vlans.rsc
 
 # a script to add and remove 50 VLANs to/fromon-error={
 # a Mikrotik router interface

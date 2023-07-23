@@ -1,6 +1,9 @@
-:global Filename "ch10-08-bad-script.rsc"
-# A script to perform a series of tests on a
+# filename: ch10-08-bad-script.rsc
+#
+# A simple script to perform a series of tests on a
 # list of web sites.
+
+:global Filename "ch10-08-bad-script.rsc"
 
 # set DEBUG to "true" for script debugging output,
 # "false" for normal operation
@@ -34,7 +37,7 @@
         $DebugFunc "Checking arg data type is correct";
 
         :if (([:typeof $WebSiteName] != "str") or \
-                    ([:len value=$WebSiteName] < 6)) do={
+                    ([:len $WebSiteName] < 6)) do={
             :local ErrorMsg "DnsResolveFunc: arg value $WebSiteName \
                 not a valid string!";
             $LogMessageFunc $ErrorMsg;
@@ -85,10 +88,10 @@
 
     # check arg type str of correct length passed
     if (([:typeof $SiteName] != "str") or \
-        ([:len value=$SiteName] < 6)) do={
+        ([:len $SiteName] < 6)) do={
         $LogMessageFunc ("GetWebPageFunc: arg value $SiteName not a \
             valid string!");
-        :return { "duration"="*** test failed ***" };
+        :return { "*** test failed ***" };
     }
 
     do {
@@ -97,7 +100,7 @@
     } on-error {
         $LogMessageFunc ("GetWebPageFunc: unable to retrieve site: \
             $SiteName !");
-        return { "duration"="*** test failed ***" };
+        return { "*** test failed ***" };
     }
 }
 

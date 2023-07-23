@@ -3,7 +3,7 @@
 # A simple script to perform a series of tests on a
 # list of web sites. 
 
-:global Filename "ch10-04-bad-script.rsc"
+:global Filename "ch10-04-bad-script.rsc";
 
 # function to log error message
 :global LogMessageFunc do={
